@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-image: url("/data/img/forest.jpg");
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 100vw 100vh;
+}
+
+.container {
+  height: 100vh;
+  width: auto;
+  max-width: auto;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas:
+    "header"
+    "conten";
+}
+
+.section-header {
+  grid-area: header;
+}
+
+.app-header {
+  color: yellow;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+#add-task:hover {
+  background-color: orange;
+  transition: all 0.2s ease;
+}
+
+.section-content {
+  grid-area: conten;
+}
+
+#columns {
+  display: inline-block;
+  margin-left: 30px;
+  margin-bottom: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  display: inline-block;
+  height: 60vh;
+  min-height: 300px;
+  max-height: auto;
+  /* min-width: 10%; */
+  width: 40vh;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 15px;
+  color: white;
+  margin: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+h3 {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 900;
+  text-shadow: 1px 1px 4px black;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#task-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: -14%;
+  left: 12%;
+  margin-top: 15rem;
+}
+
+#add-task {
+  background-color: red;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  color: yellow;
+  width: 18rem;
+  margin-top: 20px;
+}
+
+#task-value {
+  width: 18rem;
+  height: 2rem;
+  border-radius: 10px;
+}
+
+.column-backlog {
+  background: orange;
+}
+
+.column-in-progress {
+  background: DarkSlateGray;
+}
+
+.column-complete {
+  background: green;
+}
+
+.column-on-hold {
+  background: red;
+}
+
+.task-color {
+  background: black;
+  width: 16rem;
+  min-width: 60px;
+  font-size: 32px;
+  font-weight: 900;
+  text-shadow: 1px 1px 4px black;
+  padding: 15px;
+  border-radius: 15px;
+  overflow-x: auto;
+  scrollbar-color: gray;
+}
+
+li {
+  list-style: none;
+  font-size: 1.8rem;
+  margin-top: 0.7rem;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.trash {
+  margin-left: 0.3rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  width: 3em;
+  height: 3em;
+}
